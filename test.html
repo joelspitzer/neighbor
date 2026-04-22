@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,12 @@ HTML
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Helping Hand Down the Hall</title>
     <style>
-        /* Modern, clean font stack similar to your other site */
+        /* Modern, clean font stack */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f0f2f5; /* Light gray background to make the white boxes pop */
+            background-color: #f0f2f5; 
             margin: 0;
             padding: 0;
         }
@@ -22,24 +21,31 @@ HTML
             padding: 40px 20px;
         }
 
-        header {
+        /* The new Blue Box for the main Title and Subtitle */
+        .header-box {
+            background-color: #007bff;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        h1 {
-            color: #1a1a1a;
+        .header-box h1 {
+            margin: 0;
             font-size: 2.5rem;
-            margin-bottom: 5px;
+            color: white;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #555;
+        .header-box .subtitle {
+            font-size: 1.3rem;
+            margin-top: 10px;
             font-weight: 300;
+            opacity: 0.9;
         }
 
-        /* Profile Card - matches the 'test' page style */
+        /* Profile Card */
         .card {
             background: white;
             padding: 30px;
@@ -62,18 +68,18 @@ HTML
             border: 3px solid #007bff;
         }
 
-        /* The blue box scheme for services */
+        /* Service Boxes with Blue Headers */
         .service-box {
             background: white;
-            padding: 0; /* Padding is handled by internal divs for the header effect */
+            padding: 0;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             margin-bottom: 25px;
-            overflow: hidden; /* Keeps the blue header corners rounded */
+            overflow: hidden;
         }
 
         .service-header {
-            background-color: #007bff; /* Matching blue accent */
+            background-color: #007bff;
             color: white;
             padding: 12px 25px;
         }
@@ -110,7 +116,7 @@ HTML
             color: white;
             padding: 15px 35px;
             text-decoration: none;
-            border-radius: 4px; /* Slightly more square button to match your other site */
+            border-radius: 4px;
             font-weight: bold;
             font-size: 1.1rem;
             transition: background-color 0.2s;
@@ -133,14 +139,15 @@ HTML
                 flex-direction: column;
                 text-align: center;
             }
-            h1 { font-size: 2rem; }
+            .header-box h1 { font-size: 1.8rem; }
+            .header-box .subtitle { font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
+    <header class="header-box">
         <h1>A Helping Hand Down the Hall</h1>
         <div class="subtitle">Friendly assistance for our building community</div>
     </header>
