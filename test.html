@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,130 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Helping Hand Down the Hall</title>
     <style>
-        /* General Styles */
+        /* Modern, clean font stack similar to your other site */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background-color: #f0f2f5; /* Light gray background to make the white boxes pop */
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        /* Header Section */
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            color: #2c3e50;
+            color: #1a1a1a;
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #666;
-            font-style: italic;
+            color: #555;
+            font-weight: 300;
         }
 
-        /* Intro Section */
-        .profile-section {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+        /* Profile Card - matches the 'test' page style */
+        .card {
             background: white;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 3px solid #007bff;
         }
 
-        /* Service Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .service-card {
+        /* The blue box scheme for services */
+        .service-box {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border-left: 5px solid #007aff; /* Apple-style blue accent */
+            padding: 0; /* Padding is handled by internal divs for the header effect */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            overflow: hidden; /* Keeps the blue header corners rounded */
         }
 
-        .service-card h3 {
-            margin-top: 0;
-            color: #007aff;
+        .service-header {
+            background-color: #007bff; /* Matching blue accent */
+            color: white;
+            padding: 12px 25px;
+        }
+
+        .service-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .service-body {
+            padding: 20px 25px;
         }
 
         .hats-img {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             height: auto;
             border-radius: 8px;
             margin: 20px auto;
             display: block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        /* Footer & Button */
-        .footer-note {
-            background: #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 40px;
-            font-size: 0.95rem;
-            text-align: center;
-        }
-
-        .contact-area {
+        /* Contact Button */
+        .contact-section {
             text-align: center;
             margin-top: 40px;
-            padding-bottom: 60px;
+            padding: 40px 20px;
         }
 
         .btn {
             display: inline-block;
-            background-color: #007aff;
+            background-color: #007bff;
             color: white;
-            padding: 15px 30px;
+            padding: 15px 35px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 4px; /* Slightly more square button to match your other site */
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            font-size: 1.1rem;
+            transition: background-color 0.2s;
         }
 
         .btn:hover {
             background-color: #0056b3;
         }
 
-        /* Responsive design for phones */
+        .note {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 25px;
+            font-style: italic;
+        }
+
+        /* Mobile adjustments */
         @media (max-width: 600px) {
-            .profile-section {
+            .intro-section {
                 flex-direction: column;
                 text-align: center;
             }
-            h1 {
-                font-size: 1.8rem;
-            }
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -140,49 +145,59 @@
         <div class="subtitle">Friendly assistance for our building community</div>
     </header>
 
-    <section class="profile-section">
-        <img src="joel.jpg" alt="Joel Spitzer" class="profile-img">
-        <div>
-            <p>Hello! I am Joel, a fellow resident here with some extra time on my hands. I enjoy helping out around the building to make things run a little smoother for everyone.</p>
+    <div class="card">
+        <div class="intro-section">
+            <img src="joel.jpg" alt="Joel Spitzer" class="profile-img">
+            <div>
+                <p>Hello! I am Joel, a fellow resident here with some extra time on my hands. I enjoy helping out around the building to make things run a little smoother for everyone.</p>
+            </div>
         </div>
-    </section>
+    </div>
 
     <img src="hats.jpg" alt="Joel Spitzer - A man of many hats" class="hats-img">
 
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>Assistance with Heavy Items</h3>
+    <div class="service-box">
+        <div class="service-header"><h3>Assistance with Heavy Items</h3></div>
+        <div class="service-body">
             <p>Moving large boxes or heavy deliveries alone can be a struggle. If you need a hand getting a bulky item into your unit, I’m happy to help with the heavy lifting.</p>
         </div>
+    </div>
 
-        <div class="service-card">
-            <h3>Apple Device & Wi-Fi Help</h3>
+    <div class="service-box">
+        <div class="service-header"><h3>Apple Device & Wi-Fi Help</h3></div>
+        <div class="service-body">
             <p>If you are having trouble getting your devices connected to the building Wi-Fi or need assistance with your iPhone, iPad, or Mac, I'm happy to help you get things working properly.</p>
         </div>
+    </div>
 
-        <div class="service-card">
-            <h3>Bicycling & E-Biking Trails</h3>
+    <div class="service-box">
+        <div class="service-header"><h3>Bicycling & E-Biking Trails</h3></div>
+        <div class="service-body">
             <p>We are right by the North Shore Channel Trail. Having ridden these paths for decades, I can help you find the best routes for both traditional bicycling and e-biking. I’d be happy to cycle along to show you the way.</p>
         </div>
+    </div>
 
-        <div class="service-card">
-            <h3>Dog Walking & Check-ins</h3>
+    <div class="service-box">
+        <div class="service-header"><h3>Dog Walking & Check-ins</h3></div>
+        <div class="service-body">
             <p>If you ever need someone to take your dog for a walk or just check in on them, I’d be glad to help.</p>
         </div>
+    </div>
 
-        <div class="service-card">
-            <h3>Misplaced Packages</h3>
+    <div class="service-box">
+        <div class="service-header"><h3>Misplaced Packages</h3></div>
+        <div class="service-body">
             <p>I regularly check common areas for misplaced delivery packages. When I find them, I move them to the mailroom so they stay secure and reach the correct residents.</p>
         </div>
     </div>
 
-    <div class="footer-note">
-        <strong>A Friendly Note:</strong> This assistance is provided strictly as a personal favor between neighbors. I do not accept any payment or tips for my time. If you feel compelled to give, please consider making a donation to your favorite charity instead.
-    </div>
-
-    <div class="contact-area">
+    <div class="contact-section">
         <p>Need a hand? Reach out or just say hello in the hall!</p>
         <a href="mailto:info@joelspitzer.com" class="btn">Send me a message</a>
+        
+        <div class="note">
+            <strong>A Friendly Note:</strong> This assistance is provided strictly as a personal favor between neighbors. I do not accept any payment or tips for my time. If you feel compelled to give, please consider making a donation to your favorite charity instead.
+        </div>
     </div>
 </div>
 
